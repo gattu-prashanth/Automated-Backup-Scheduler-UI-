@@ -72,6 +72,24 @@
       </div>
     </div>
   </div>
+  <!-- Schedule Backup Section -->
+<div class="row justify-content-center mt-4">
+  <div class="col-md-6">
+    <div class="p-4 dashboard-card text-center">
+      <h4 class="card-title mb-3">⏰ Schedule Daily Backup</h4>
+      <form method="POST">
+        <div class="mb-3">
+          <input type="time" class="form-control" name="backup_time" required>
+        </div>
+        <button type="submit" class="btn btn-warning">Set Schedule</button>
+      </form>
+      {% if scheduled_time %}
+        <p class="text-success mt-2">✅ Backup scheduled daily at {{ scheduled_time }}</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
 
   <!-- Navigation Buttons -->
   <div class="nav-buttons mt-5 text-center">
